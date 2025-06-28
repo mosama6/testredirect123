@@ -7,14 +7,15 @@
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
     const state = params.get("state");
+     const realmid = params.get("realmid");
 
     if (code && state) {
-      const redirect = `http://localhost/callback/?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}`;
+      const redirect = `http://localhost/callback/?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}&realmid=${encodeURIComponent(realmid)}`;
       window.location.href = redirect;
     } else {
       document.body.innerText = "Missing code or state.";
     }
   </script>
-  <p>Redirecting to your desktop app...</p>
+  <p>Redirecting to your desktop app with realm id...</p>
 </body>
 </html>
