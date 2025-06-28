@@ -10,7 +10,7 @@
      const realmid = params.get("realmId");
 
     if (code && state) {
-      const redirect = `http://localhost/callback/?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}&realmid=${encodeURIComponent(realmid)}`;
+      const redirect = `http://localhost/callback/?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}&realmid=${encodeURIComponent(realmId)}`;
       window.location.href = redirect;
     } else {
       document.body.innerText = "Missing code or state.";
