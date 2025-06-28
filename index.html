@@ -7,7 +7,7 @@
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
     const state = params.get("state");
-     const realmid = params.get("realmid");
+     const realmid = params.get("realmId");
 
     if (code && state) {
       const redirect = `http://localhost/callback/?code=${encodeURIComponent(code)}&state=${encodeURIComponent(state)}&realmid=${encodeURIComponent(realmid)}`;
